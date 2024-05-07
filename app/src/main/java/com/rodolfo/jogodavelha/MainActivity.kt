@@ -167,11 +167,14 @@ class MainActivity : AppCompatActivity() {
     private fun iniciarJogo() {
         SoundEffects.playNewGame(this)
 
-        val it = Intent(this, MainActivity::class.java)
+//        val it = Intent(this, MainActivity::class.java)
 
-        finishAfterTransition()
-        startActivity(it, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+//        finishAfterTransition()
+//        startActivity(it, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
 
+//        overrideActivityTransition(0,0,0)
+        finish()
+        overridePendingTransition(0, 0)
         // Showing a toast message at the time when we are capturing screenshot
         Toast.makeText(
             this@MainActivity,
